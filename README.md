@@ -2,6 +2,7 @@
 
 This is a small class that aim to help with the animation of sprite with sfml
 Can be easily adapted to CSFML
+The main show a little exemple on how to use it
 
 # Usage
 
@@ -9,9 +10,10 @@ The main class is mEntity, you can initialize it like this
 
 ```cpp
 mEntity entity("sprite.png", {22, 187, 17, 29}, 120, 6, LEFT_TO_RIGHT, "walk");
+entity.addAnimationLoop("idle", 3, 500, {21, 68, 16, 23});
 ```
 
-The animation will be saved and can be call later
+The animations are saved and can be call later on the program
 
 ```cpp
 entity.changeAnimationLoop("walk");
